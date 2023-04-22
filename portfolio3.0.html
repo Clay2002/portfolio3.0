@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queries</title>
+</head>
+<body>
+    
+
+
+<div id = "main">
+
+<div id ="cl">CL</div>
+<div id ="home">home</div>
+<div id ="skills">skills</div>
+<div id ="portfolio">portfolio</div>
+<div id ="contact-me">contact me</div>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
+
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+#main{
+    display: grid;
+    grid-template-columns: 3, 1fr;
+    border: black solid 2px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+#cl{
+grid-column: 1 / 2;
+grid-row: 1;
+background-color: orange;
+padding: 20px;
+border: solid black 2px;
+font-weight:bold;
+
+
+}
+
+#home{
+
+grid-column: 2 / 3;
+grid-row: 1;
+background-color: green;
+padding: 20px;
+border: solid black 2px;
+
+}
+
+#skills{
+grid-column: 3/ 4;
+grid-row: 1;
+background-color: blue;
+padding: 20px;
+border: solid black 2px;
+
+}
+#portfolio{
+grid-column: 4/ 5;
+grid-row: 1;
+background-color: rgb(35, 35, 78);
+padding: 20px;
+border: solid black 2px;
+
+}
+#contact-me{
+grid-column: 5/ 6;
+grid-row: 1;
+background-color: rgb(102, 10, 91);
+padding: 20px;
+border: solid black 2px;
+
+}
+
+
+
+
+
+@media screen and (max-width: 600px){
+
+    #home{grid-column: 2/4;}
+
+    #skills{grid-column: 1 / 4; grid-row: 2;}
+
+}
+
+@media screen and (max-width: 450px){
+
+    #cl{grid-column: 1/4; grid-row: 1;}
+
+    #home{grid-column: 1/4; grid-row: 2;}
+
+    #skills{grid-column: 1 / 4; grid-row: 3;}
+
+}
+
+@media screen and (max-width: 425px){
+
+    #portfolio{grid-column: 1 / 4; grid-row: 4; }
+}
+@media screen and (max-width: 400px){
+
+#contact-me{grid-column: 1 / 4; grid-row: 5; }
+}
+
+
+
+
+
+
+
+
+</style>
