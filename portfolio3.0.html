@@ -35,25 +35,27 @@
 <div id ="title">My Skills</div>
 
 
+
+
 <div id = "skills-screen">
 
 
-<div id ="html">
+<div id ="html-logo">
 
-    <img alt="html-logo" src="html-logo.png" width="125" height="125"> 
+    <img alt="html-logo" src="html-logo.png" width="110" height="110"> 
 </div>
-<div id ="css">
-    <img alt="css-logo" src="css-logo.png" width="125" height="125"> 
+<div id ="css-logo">
+    <img alt="css-logo" src="css-logo.png" width="110" height="110"> 
 
 </div>
-<div id ="javascript">
+<div id ="javascript-logo">
 
-    <img alt="javascript-logo" src="javascript-logo.png" width="125" height="125"> 
+    <img alt="javascript-logo" src="javascript-logo.png" width="110" height="110"> 
 </div>
-<div id ="react">
+<div id ="react-logo">
     <img alt="react-logo" src="react-logo.png" width="125" height="125"> </div>
 
-<div id ="bootstrap">
+<div id ="bootstrap-logo">
     <img alt="bootstrap-logo" src="bootstrap-logo.png" width="125" height="125"> 
 </div>
 
@@ -61,14 +63,57 @@
 </div>
 
 
-<div id ="skills-images">
 
+<div id ="projects">My Projects</div>
+
+
+
+
+<div id="projects-container">
+
+
+<div id="project-1">
+
+<div id = "proj-1-title">My Movie Ratings</div>
+<img id = "proj-1-img" src ="moive-projectpic.png"/>
+<div id = "proj-1-desc">This was my first project messing around with making it responsive. The goal was to mkae it look good on an iphone and laptop screen. This was also the first time I messed around with some javascript. I used a lot of javascript dom with function for adding and subtracting elements on the screen! You can pick what type of movies you want to display and see the pic, basic info about the movie and my movie rating!</div>
+</div>
+
+
+<div id="project-2">
+
+<div id = "proj-2-title">Sign Up Page</div>
+<img id = "proj-2-img" src ="login-formpage.png"/>
+<div id = "proj-2-desc">This is a sign up form page. This page used a lot of if else function statements till you match what the rules are. Error puts up if you dont have along enough usernam or password. You can also show and hide your password!</div>
+
+</div>
 
 
 
 </div>
 
+<div id="projects-container-2">
 
+
+
+    <div id="project-3">
+
+        <div id = "proj-3-title">My Tasks List</div>
+        <img id = "proj-3-img" src ="todolistpic.png"/>
+        <div>desc</div>
+
+    </div>
+    <div id="project-4">
+
+        <div id = "proj-4-title">Project 4</div>
+        <div>img</div>
+        <div>desc</div>
+
+
+    </div>
+
+
+</div>
 
 </body>
 </html>
@@ -82,7 +127,6 @@
     box-sizing: border-box;
 
 }
-
 
 
 #main{
@@ -144,7 +188,6 @@ text-align: center;
 }
 
 
-
 @media screen and (max-width: 1000px){
 
 
@@ -176,7 +219,6 @@ text-align: center;
 
 
 }
-
 
 
 #home-screen{
@@ -227,58 +269,197 @@ font-size: 30px;
 }
 
 
+
 #skills-screen{
 
-    border: black solid 3px;
-    display: grid;
-    grid-template-columns:5, 1fr;
-    font-size: 30px;
+border: black solid 3px;
+display: grid;
+grid-template-columns:6, 1fr;   
+padding-bottom: 300px;
+text-align: center;
+
+}
+
+#html-logo{
+grid-column: 1 / 2;
+grid-row: 1;
+border: solid black 2px;
+
+
+}
+#css-logo{
+
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border: solid black 1px;
+ 
+}
+#javascript-logo{
+    grid-column: 1;
+    grid-column: 3 / 4;
+
+    border: solid black 1px;
+}
+#react-logo{
+    grid-column: 1;
+    grid-column: 4 / 5;
+
+    border: solid black 1px;
+}
+#bootstrap-logo{
+    grid-column: 1;
+    grid-column: 5 / 6;
+    border: solid black 1px;
+}
+
+@media screen and (max-width: 1000px){
+
+#bootstrap-logo {grid-column: 1/5; grid-row: 2;}
+
+}
+@media screen and (max-width: 950px){
+
+#react-logo{grid-column: 1/5; grid-row: 2;}
+#bootstrap-logo {grid-column: 1/5; grid-row: 3;}
+
+}
+@media screen and (max-width: 900px){
+
+#react-logo{grid-column: 1/5; grid-row: 3;}
+#bootstrap-logo {grid-column: 1/5; grid-row: 4;}
+#javascript-logo{grid-column: 1/5; grid-row: 2;}
+}
+
+@media screen and (max-width: 850px){
+
+#html-logo{grid-column: 1/5; grid-row: 1;}
+#react-logo{grid-column: 1/5; grid-row: 4;}
+#bootstrap-logo {grid-column: 1/5; grid-row: 5;}
+#javascript-logo{grid-column: 1/5; grid-row: 3;}
+#css-logo{grid-column: 1/5; grid-row: 2;}
+}
+
+
+#projects{
+
     text-align: center;
-    padding-bottom: 300px;
-
-}
-
-#html{
-    grid-column: 1;
-    grid-column: 1/ 2;
-
-    border: solid black 1px;
-}
-#css{
-    grid-column: 1;
-    grid-column: 2/ 3;
-
-    border: solid black 1px;
-}
-#javascript{
-    grid-column: 1;
-    grid-column: 3/ 4;
-
-    border: solid black 1px;
-}
-#react{
-    grid-column: 1;
-    grid-column: 4/ 5;
-
-    border: solid black 1px;
-}
-#bootstrap{
-    grid-column: 1;
-    grid-column: 5/ 6;
-
-    border: solid black 1px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 
+#projects-container{
 
-
-
-
-
-#skills-images{
-
-    border: solid black 1px;
+    border: black 3px solid;
+    display: grid;
+    grid-template-columns:2,1fr;
+    padding:75px;
 }
+
+
+#project-1{
+
+border: black solid 2px;
+grid-row: 1;
+grid-column: 1/2;
+font-weight: bold;
+font-size: 25px;
+text-align: center;
+}
+
+#project-2{
+
+border: black solid 2px;
+grid-row: 1;
+grid-column: 2/3;
+text-align: center;
+font-weight: bold;
+font-size: 25px;
+
+}
+
+
+
+#projects-container-2{
+
+border: black 3px solid;
+display: grid;
+grid-template-columns:2,1fr;
+padding: 75px;
+font-size: 25px;
+
+}
+#project-3{
+
+border: black solid 2px;
+grid-row: 1;
+grid-column: 1/2;
+text-align: center;
+font-weight: bold;
+font-size: 25px;
+}
+#project-4{
+
+border: black solid 2px;
+grid-row: 1;
+grid-column: 2/3;
+text-align: center;
+font-weight: bold;
+font-size: 25px;
+}
+
+
+
+#proj-1-img, #proj-2-img, #proj-3-img{
+
+
+height:350px;
+width:350px;
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 850px){
+
+    #project-1{grid-column: 1/2; grid-row: 1;}
+    #project-2{grid-column: 1/2; grid-row: 2;}
+   
+}
+
+
+
+@media screen and (max-width: 600px){
+#proj-1-img{height: 250px; width: 250px;}
+    #proj-2-img{height: 250px; width: 250px;}
+
+
+}
+
+
+
+
+#proj-1-desc, #proj-2-desc{
+
+    border: solid black 2px;
+    font-weight: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
