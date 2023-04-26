@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>media queries</title>
+    <title>Portfolio</title>
 </head>
 <body>
     
-
+<button id ="btnScrollToTop">up</button>
 
 <div id = "main">
 
-<div id ="cl">CL</div>
-<div id ="home">home</div>
-<div id ="skills">skills</div>
-<div id ="portfolio">portfolio</div>
-<div id ="contact-me">contact me</div>
+<div id ="cl">Clayton.dev</div>
+<button id ="home">home</button>
+<button id ="skills">skills</button>
+<button  id ="portfolio">portfolio</button>
+<button  id ="contact-me">contact me</button>
 
 </div>
 
@@ -100,14 +100,14 @@
 
         <div id = "proj-3-title">My Tasks List</div>
         <img id = "proj-3-img" src ="todolistpic.png"/>
-        <div>desc</div>
+        <div id = "proj-3-desc">The my task list started of as a todo list. Later I just changed it as a task list and the things I need to get done through out the day I can addd and delete/change them. I can also checkoff my goals like drinking 1 gallon of water or working out. I can but text in the note section and turn dark mode on and off.</div>
 
     </div>
     <div id="project-4">
 
         <div id = "proj-4-title">Project 4</div>
-        <div>img</div>
-        <div>desc</div>
+        <img id = "proj-4-img" src ="todolistpic.png"/>
+        <div id = "proj-4-desc">dawdawd dwaad waduv kawuyd vawuydv kdddwa daw dwaw dwa awuyd aw d</div>
 
 
     </div>
@@ -115,17 +115,35 @@
 
 </div>
 
+<div id ="contact-me1">Contact Me</div>
+
+<div id ="contact-me-container">
+
+
+    <div id ="email">Email</div>
+    <div id ="email-text">2813597@vikes.csuohio.edu</div>
+    <img id = "github" src ="GitHub-logo.png"/>
+    <a href="https://github.com/Clay2002"></a>
+    <div id ="number">Phone Number</div>
+    <div id ="number-nums">440-444-4808</div>
+
+
+
+</div>
+
+
+
 </body>
 </html>
 
 
 <style>
 
-*{
+body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    background: linear-gradient(#24AADB, #4e6fd9, #24DBB1);
 }
 
 
@@ -133,10 +151,11 @@
 
     display: grid;
     grid-template-columns:  auto  auto  auto  auto  ;
-    border: black solid 2px;
     font-size: 20px;
     font-weight: bold;
     padding-bottom: 200px;
+    padding-top: 17px;
+   
 }
 
 
@@ -144,9 +163,8 @@
 
 grid-column: 1 / span 5;
 grid-row: 1;
-background-color: rgb(119, 116, 116);
 padding: 20px;
-border: solid black 2px;
+font-size: 35px;
 font-weight:bold;
 
 
@@ -156,35 +174,58 @@ font-weight:bold;
 
 grid-column: 6 / 7;
 grid-row: 1;
-background-color: rgb(119, 116, 116);
+font-weight: bold;
+font-size: 20px;
 padding: 20px;
-border: solid black 2px;
+background-color: transparent;
 text-align: center;
+border: 0;
+cursor: pointer;
+}
+
+#home:hover, #skills:hover, #portfolio:hover, #contact-me:hover{
+
+    background-color: rgb(24, 162, 241);
+
+
 }
 
 #skills{
 grid-column: 7/ 8;
 grid-row: 1;
-background-color: rgb(119, 116, 116);
+font-weight: bold;
+font-size: 20px;
 padding: 20px;
-border: solid black 2px;
+background-color: transparent;
 text-align: center;
+border: 0;
+cursor: pointer;
 }
+
+
+
+
 #portfolio{
 grid-column: 8/ 9;
 grid-row: 1;
-background-color: rgb(119, 116, 116);
+font-weight: bold;
+font-size: 20px;
 padding: 20px;
-border: solid black 2px;
+background-color: transparent;
 text-align: center;
+border: 0;
+cursor: pointer;
 }
 #contact-me{
 grid-column: 9/ 10;
 grid-row: 1;
-background-color: rgb(119, 116, 116);
+font-weight: bold;
+font-size: 20px;
 padding: 20px;
-border: solid black 2px;
+background-color: transparent;
 text-align: center;
+border: 0;
+cursor: pointer;
 }
 
 
@@ -224,7 +265,7 @@ text-align: center;
 #home-screen{
 
 
-border: black solid 2px;
+
 display: grid;
 grid-template-columns: 1fr 1fr;
 font-size: 30px;
@@ -232,7 +273,7 @@ font-size: 30px;
 
 #pic{
 
-    border: black solid 2px;
+
     grid-column: 1;
     grid-column: 1/ 2;
 
@@ -240,7 +281,7 @@ font-size: 30px;
 
 #about-me{
 
-    border: black solid 2px;
+    
     grid-column: 2/4;
     padding: 25px;
 
@@ -272,7 +313,7 @@ font-size: 30px;
 
 #skills-screen{
 
-border: black solid 3px;
+
 display: grid;
 grid-template-columns:6, 1fr;   
 padding-bottom: 300px;
@@ -283,7 +324,7 @@ text-align: center;
 #html-logo{
 grid-column: 1 / 2;
 grid-row: 1;
-border: solid black 2px;
+
 
 
 }
@@ -291,25 +332,25 @@ border: solid black 2px;
 
     grid-column: 2 / 3;
     grid-row: 1;
-    border: solid black 1px;
+ 
  
 }
 #javascript-logo{
     grid-column: 1;
     grid-column: 3 / 4;
 
-    border: solid black 1px;
+   
 }
 #react-logo{
     grid-column: 1;
     grid-column: 4 / 5;
 
-    border: solid black 1px;
+    
 }
 #bootstrap-logo{
     grid-column: 1;
     grid-column: 5 / 6;
-    border: solid black 1px;
+  
 }
 
 @media screen and (max-width: 1000px){
@@ -340,6 +381,13 @@ border: solid black 2px;
 }
 
 
+#proj-1-title,#proj-2-title,#proj-3-title,#proj-4-title{
+
+padding-bottom: 20px;
+text-decoration: underline;
+font-size: 30px;
+}
+
 #projects{
 
     text-align: center;
@@ -350,7 +398,7 @@ border: solid black 2px;
 
 #projects-container{
 
-    border: black 3px solid;
+  
     display: grid;
     grid-template-columns:2,1fr;
     padding:75px;
@@ -359,7 +407,6 @@ border: solid black 2px;
 
 #project-1{
 
-border: black solid 2px;
 grid-row: 1;
 grid-column: 1/2;
 font-weight: bold;
@@ -369,7 +416,6 @@ text-align: center;
 
 #project-2{
 
-border: black solid 2px;
 grid-row: 1;
 grid-column: 2/3;
 text-align: center;
@@ -379,10 +425,9 @@ font-size: 25px;
 }
 
 
-
 #projects-container-2{
 
-border: black 3px solid;
+
 display: grid;
 grid-template-columns:2,1fr;
 padding: 75px;
@@ -391,7 +436,7 @@ font-size: 25px;
 }
 #project-3{
 
-border: black solid 2px;
+
 grid-row: 1;
 grid-column: 1/2;
 text-align: center;
@@ -400,7 +445,7 @@ font-size: 25px;
 }
 #project-4{
 
-border: black solid 2px;
+
 grid-row: 1;
 grid-column: 2/3;
 text-align: center;
@@ -409,8 +454,7 @@ font-size: 25px;
 }
 
 
-
-#proj-1-img, #proj-2-img, #proj-3-img{
+#proj-1-img, #proj-2-img, #proj-3-img, #proj-4-img{
 
 
 height:350px;
@@ -418,10 +462,6 @@ width:350px;
 
 
 }
-
-
-
-
 
 
 @media screen and (max-width: 850px){
@@ -445,24 +485,200 @@ width:350px;
 
 #proj-1-desc, #proj-2-desc{
 
-    border: solid black 2px;
+
     font-weight: 1;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
 
 
+#proj-3-desc, #proj-4-desc{
+
+font-weight: 1;
+padding-top: 20px;
+padding-left: 10px;
+    padding-right: 10px;
+}
 
 
 
+@media screen and (max-width: 850px){
+
+#project-3{grid-column: 1/2; grid-row: 1;}
+#project-4{grid-column: 1/2; grid-row: 2;}
+
+}
 
 
 
+@media screen and (max-width: 600px){
+#proj-3-img{height: 250px; width: 250px;}
+#proj-4-img{height: 250px; width: 250px;}
 
 
+}
 
 
+#contact-me-container{
 
+
+    padding-top: 10px;
+
+}
+#email,#number{
+
+    text-align: center;
+    font-size: 25px;
+    padding-top: 10px;
+    font-weight: bold;
+
+}
+
+
+#email-text,#number-nums{
+
+    text-align: center;
+
+}
+
+#github{
+    padding-top: 10px;
+    height: 40px;
+    width: 60px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+#contact-me1{
+
+text-align: center;
+font-weight: bold;
+font-size: 35px;
+
+
+}
+
+#btnScrollToTop{
+
+position: fixed;
+right: 10px;
+bottom: 10px;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+background-color: #244EDB;
+outline: none;
+cursor: pointer;
+color: whitesmoke;
+box-shadow: 0 0 10px black;
+border: none;
+    
+}
+
+#btnScrollToTop:active{
+
+    background-color: rgb(24, 162, 241);
+}
+
+#home:active, #skills:active, #portfolio:active, #contact-me:active{
+
+background-color: rgb(8, 118, 183);
+}
 
 
 </style>
+
+
+<script>
+
+
+//scroll to top of the page button
+const btnScrollToTop = document.querySelector("#btnScrollToTop");
+
+btnScrollToTop.addEventListener("click", function (){
+
+
+window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+})
+
+
+});
+
+
+
+const home = document.querySelector("#home");
+
+home.addEventListener("click", function (){
+
+
+window.scrollTo({
+    top: 150,
+    left: 150,
+    behavior: "smooth"
+})
+
+
+});
+
+
+
+
+const skills = document.querySelector("#skills");
+
+skills.addEventListener("click", function (){
+
+
+window.scrollTo({
+    top: 477,
+    left: 477,
+    behavior: "smooth"
+})
+
+
+});
+
+
+
+const portfolio = document.querySelector("#portfolio");
+
+portfolio.addEventListener("click", function (){
+
+
+window.scrollTo({
+    top: 1100,
+    left: 1100,
+    behavior: "smooth"
+})
+
+
+});
+
+
+const con = document.querySelector("#contact-me");
+
+con.addEventListener("click", function (){
+
+
+window.scrollTo({
+    top: 2300,
+    left: 2300,
+    behavior: "smooth"
+})
+
+
+});
+
+
+
+
+
+</script>
